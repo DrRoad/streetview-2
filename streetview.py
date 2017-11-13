@@ -11,7 +11,7 @@ frameArray = []
 # get images via API
 
 for i in range(180):
-    angle = 'https://maps.googleapis.com/maps/api/streetview?size=640x640&location=49.2056541,18.7642928&key=YOUR-API-KEY&fov=40&heading=170&pitch=' + str((180-float(i))/2.0)
+    angle = 'https://maps.googleapis.com/maps/api/streetview?size=640x640&location=YOUR-LOCATION&key=YOUR-API-KEY&fov=40&heading=170&pitch=' + str((180-float(i))/2.0)
     file = cStringIO.StringIO(urllib.urlopen(angle).read()) # manages URL
     image_file = Image.open(file)
     filename = '/FOLDER/' + str(i) + '.jpg'
